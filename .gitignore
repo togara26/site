@@ -65,3 +65,6 @@ storage/*.key
 .*.env
 .env
 !.env.example
+.phpstorm.meta.php
+_ide_helper.php
+composer.lock
