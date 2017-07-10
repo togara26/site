@@ -38,4 +38,5 @@
 
 @yield('custom_scripts')
 
+
 </html>
