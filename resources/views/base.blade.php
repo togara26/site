@@ -14,20 +14,13 @@
 </head>
 
 <body>
+    @include('menu')
+
     <div class="container-fluid">
         @yield('content')
     </div>
 
 </body>
-
-<ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="www.tylerogara.com">Home</a></li>
-    <li role="presentation"><a href="www.tylerogara.com/aboutme">About Me</a></li>
-    <li role="presentation"><a href="https://www.linkedin.com/in/tylerogara/">LinkedIn</a></li>
-    <li role="presentation"><a href="https://onedrive.live.com/?cid=4273683C7EE3288A&id=4273683C7EE3288A%212899&parId=4273683C7EE3288A%21109&o=OneUp">Resume</a></li>
-</ul>
-
-
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -39,6 +32,9 @@
     });
 </script>
 
+<script>
+    $('*[data-menu-item="{{ $menu_link }}"]').addClass('active');
+</script>
 
 @yield('custom_scripts')
 

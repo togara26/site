@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'MainController@landing');
+Route::get('/page/{page_slug}', 'MainController@page');
