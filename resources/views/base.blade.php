@@ -22,7 +22,7 @@
     @yield('custom_styles')
 </head>
 
-<body data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     @include('menu')
 
     @yield('content')
