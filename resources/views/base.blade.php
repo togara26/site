@@ -43,6 +43,13 @@
 </script>
 
 <script>
+    $(".nav a").on("click", function(){
+        $(".nav").find(".active").removeClass("active");
+        $(this).parent().addClass("active");
+    });
+</script>
+
+<script>
     $('*[data-menu-item="{{ $menu_link }}"]').addClass('active');
 </script>
 

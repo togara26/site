@@ -11,26 +11,26 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse" aria-expanded="false">
             <ul class="nav navbar-nav">
                 <li>
                     <!--suppress HtmlUnknownTarget -->
-                    <a href="/" data-menu-item="home">Home</a>
+                    <a class="navbar-toggle" href="/" data-menu-item="home">Home</a>
                 </li>
                 <li>
                     <!--suppress HtmlUnknownTarget -->
-                    <a class="page-scroll" data-menu-item="about_me" href="/page/about_me">About</a>
+                    <a class="navbar-toggle" data-menu-item="about_me" href="/page/about_me">About</a>
                 </li>
                 <li>
                     <!--suppress HtmlUnknownTarget -->
-                    <a class="page-scroll" data-menu-item="contact_me" href="/page/contact_me">Contact</a>
+                    <a class="navbar-toggle" data-menu-item="contact_me" href="/page/contact_me">Contact</a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/tylerogara/" style="color: white">LinkedIn</a>
+                    <a class="navbar-toggle" href="https://www.linkedin.com/in/tylerogara/">LinkedIn</a>
                 </li>
 
                 <li>
-                    <a href="{{ asset('files/Resume.pdf') }}" style="color: white">Resume</a>
+                    <a class="navbar-toggle" href="{{ asset('files/Resume.pdf') }}">Resume</a>
                 </li>
             </ul>
         </div>
