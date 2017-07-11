@@ -15,15 +15,15 @@
             <ul class="nav navbar-nav">
                 <li>
                     <!--suppress HtmlUnknownTarget -->
-                    <a href="/">Home</a>
+                    <a href="/" data-menu-item="home">Home</a>
                 </li>
                 <li>
                     <!--suppress HtmlUnknownTarget -->
-                    <a class="page-scroll" href="/page/about_me">About</a>
+                    <a class="page-scroll" data-menu-item="about_me" href="/page/about_me">About</a>
                 </li>
                 <li>
                     <!--suppress HtmlUnknownTarget -->
-                    <a class="page-scroll" href="/page/contact_me">Contact</a>
+                    <a class="page-scroll" data-menu-item="contact_me" href="/page/contact_me">Contact</a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/tylerogara/" style="color: white">LinkedIn</a>
