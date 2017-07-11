@@ -44,7 +44,7 @@ p {
   }
 }
 a {
-  color: #42DCA3;
+  color: #c3c3c3;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -52,11 +52,13 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: #c3c3c3;
 }
+
 .light {
   font-weight: 400;
 }
+
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -71,13 +73,14 @@ a:focus {
 }
 .navbar-custom .navbar-toggle:focus,
 .navbar-custom .navbar-toggle:active {
-  outline: rebeccapurple;
+    background-color: black;
 }
+
 .navbar-custom .navbar-brand {
   font-weight: 700;
 }
 .navbar-custom .navbar-brand:focus {
-  outline: none;
+  outline: ridge;
 }
 .navbar-custom a {
   color: white;
@@ -88,25 +91,26 @@ a:focus {
   transition: background 0.3s ease-in-out;
 }
 .navbar-custom .nav li a:hover {
-  color: blue;
-  outline-style: dashed;
-  outline-color: blue;
-  background-color: transparent;
+  color: darkgray;
+  outline-color: darkgray;
+  background-color: dimgray;
 }
-.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:focus{
+    background-color: lightgray;
+}
 .navbar-custom .nav li a:active {
   outline: none;
-  background-color: blue;
 }
-.navbar-custom .nav li.active {
-  outline: none;
+.navbar a:active {
+  background-color:blue;
 }
 .navbar-custom .nav li.active a {
-  background-color: rgba(255, 255, 255, 0.3);
+
 }
 .navbar-custom .nav li.active a:hover {
-  color: blue;
+  color: lightgray;
 }
+
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 20px 0;
