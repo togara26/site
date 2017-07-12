@@ -34,4 +34,27 @@ $('.navbar-collapse ul li a').click(function() {
     $(".navbar-collapse").collapse('hide');
 });
 
+function leftArrowPressedLanding() {
+    document.location = "/page/contact_me";
+}
+
+function rightArrowPressedLanding() {
+    document.location = "/page/about_me";
+}
+
+function leftArrowPressedAbout() {
+    document.location = "/";
+}
+
+function rightArrowPressedAbout() {
+    document.location = "/page/contact_me";
+}
+
+function leftArrowPressedContact() {
+    document.location = "/page/about_me";
+}
+
+function rightArrowPressedContact() {
+    document.location = "/";
+}
 
