@@ -31,10 +31,10 @@ class MainController extends Controller
                 );
             case 'contact_me':
                 return view(
-                    'pages.contact',
+                    'pages.contact_me',
                     [
                         'page_name' => env('APP_NAME') . ' - Contact Me',
-                        'menu_link' => 'contact',
+                        'menu_link' => 'contact_me',
                     ]
                 );
             default:

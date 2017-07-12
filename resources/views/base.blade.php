@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="{{ asset('css/grayscale.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/grayscale.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 
     @yield('custom_styles')
 </head>
