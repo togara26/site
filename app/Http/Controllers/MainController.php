@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 
+use App\Mail\ContactMe;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Mail;
 use Mockery\Exception;
 use Validator;
 
@@ -64,7 +66,12 @@ class MainController extends Controller
                 throw new Exception('Validation rules failed!');
             }
 
-            // TODO: Send email
+            $message = new ContactMe($data['name'], $data['email'], $data['message']);
+
+            $message->subject('New Contact Message Received');
+
+            Mail::to('tyogara26@gmail.com')
+                ->send($message);
 
             return JsonResponse::create([
                 'success' => true,
