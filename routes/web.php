@@ -13,3 +13,5 @@
 
 Route::get('/', 'MainController@landing');
 Route::get('/page/{page_slug}', 'MainController@page');
+
+Route::post('/send_contact_message', 'MainController@send_contact_message');

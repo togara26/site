@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Mockery\Exception;
+use Validator;
+
 class MainController extends Controller
 {
     public function landing() {
@@ -39,6 +44,41 @@ class MainController extends Controller
                 );
             default:
                 return redirect('/');
+        }
+    }
+
+    public function send_contact_message(Request $request)
+    {
+        try
+        {
+            $data = $request->all();
+
+            $validator = Validator::make($data, [
+                'name' => 'required',
+                'email' => 'required|email',
+                'message' => 'required',
+            ]);
+
+            if ($validator->fails()) {
+                \Log::error('Validation rules failed: ' . json_encode($validator->failed()));
+                throw new Exception('Validation rules failed!');
+            }
+
+            // TODO: Send email
+
+            return JsonResponse::create([
+                'success' => true,
+            ]);
+        }
+        catch (Exception $e)
+        {
+            \Log::info($e->getTraceAsString());
+            \Log::error($e->getMessage());
+
+            return JsonResponse::create([
+                'success' => false,
+                'failure_reason' => $e->getMessage(),
+            ], 500);
         }
     }
 
