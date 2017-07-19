@@ -8,7 +8,7 @@
 @section('content')
     <section id="about" class="container content-section">
         <!--suppress HtmlUnknownTarget -->
-        <form class="form-horizontal" action="/page/contact_me">
+        <form class="form-horizontal" id="contact-form" onsubmit="event.preventDefault();">
             <div class="form-group">
                 <label for="name-field" class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10">
@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label for="email-field" class="col-sm-2 control-label">Email Address</label>
                 <div class="col-sm-10">
-                    <input type="email" required class="form-control" id="inputPassword3" placeholder="Email">
+                    <input type="email" required class="form-control" id="email-field" placeholder="Email">
                 </div>
             </div>
 
@@ -52,5 +52,21 @@
                     break;
             }
         };
+
+        $('#contact-form').submit(function () {
+            $.post("/send_contact_message",
+                {
+                    "name": $('#name-field').val(),
+                    "email": $('#email-field').val(),
+                    "message": $('#message-field').val()
+                })
+                .done(function () {
+                    alert("Message sent!");
+                })
+                .fail(function(data) {
+                    //noinspection JSUnresolvedVariable
+                    alert(data.responseJSON.failure_reason);
+                });
+        })
     </script>
 @endsection
